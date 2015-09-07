@@ -75,7 +75,9 @@ git push
 #include <sys/utime.h>
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #define snprintf _snprintf
+#endif
 #define strcasecmp stricmp
 #define strncasecmp strnicmp
 //@end DEFINES
