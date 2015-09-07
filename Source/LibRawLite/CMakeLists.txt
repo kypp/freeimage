@@ -1,8 +1,8 @@
 set (MODULE_NAME librawlite)
 
-if (!BUILD_SHARED_LIBS)
+if (NOT BUILD_SHARED_LIBS)
 	add_definitions(-D_LIB -DLIBRAW_NODLL)
-endif(!BUILD_SHARED_LIBS)
+endif(NOT BUILD_SHARED_LIBS)
 
 include_directories( . )
 

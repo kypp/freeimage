@@ -1,8 +1,8 @@
 set (MODULE_NAME libopenjpeg)
 
-if (!BUILD_SHARED_LIBS)
+if (NOT BUILD_SHARED_LIBS)
 	add_definitions(-D_LIB -DOPJ_STATIC)
-endif(!BUILD_SHARED_LIBS)
+endif(NOT BUILD_SHARED_LIBS)
 
 file (GLOB ${MODULE_NAME}_SRCS 
 	bio.c

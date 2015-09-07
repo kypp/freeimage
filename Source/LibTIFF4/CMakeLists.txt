@@ -1,8 +1,8 @@
 set (MODULE_NAME libtiff4)
 
-if (!BUILD_SHARED_LIBS)
+if (NOT BUILD_SHARED_LIBS)
 	add_definitions(-D_LIB)
-endif(!BUILD_SHARED_LIBS)
+endif(NOT BUILD_SHARED_LIBS)
 
 file (GLOB ${MODULE_NAME}_SRCS 
 	tif_aux.c

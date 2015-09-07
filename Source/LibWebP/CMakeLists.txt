@@ -1,8 +1,8 @@
 set (MODULE_NAME libwebp)
 
-if (!BUILD_SHARED_LIBS)
+if (NOT BUILD_SHARED_LIBS)
 	add_definitions(-D_LIB)
-endif(!BUILD_SHARED_LIBS)
+endif(NOT BUILD_SHARED_LIBS)
 
 file (GLOB ${MODULE_NAME}_SRCS src/dec/*.c src/demux/*.c src/dsp/*.c src/enc/*.c src/mux/*.c src/utils/*.c)
 

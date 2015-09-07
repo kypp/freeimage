@@ -1,8 +1,8 @@
 set (MODULE_NAME libjxr)
 
-if (!BUILD_SHARED_LIBS)
+if (NOT BUILD_SHARED_LIBS)
 	add_definitions(-D_LIB -DDISABLE_PERF_MEASUREMENT)
-endif(!BUILD_SHARED_LIBS)
+endif(NOT BUILD_SHARED_LIBS)
 
 include_directories( image/sys jxrgluelib )
 
