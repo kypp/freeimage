@@ -13,7 +13,14 @@ add_definitions(-D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECU
 
 add_subdirectory (Source/FreeImage)
 
-add_subdirectory (Source/LibPNG)
+option (USE_EXTERNAL_LIBPNG ON)
+
+if (NOT ${USE_EXTERNAL_LIBPNG})
+	add_subdirectory (Source/LibPNG)
+else()
+	include_directories(${PNG_INCLUDE_DIRECTORIES})
+endif()
+
 add_subdirectory (Source/LibJPEG)
 add_subdirectory (Source/LibJXR)
 add_subdirectory (Source/LibOpenJPEG)
